@@ -1,0 +1,5 @@
+dist_type fatiguelife
+para_mean 5.804920763391395
+param_variance 1.0848027070835875
+sample_mean 5.6946393766349
+sample_standard_deviation 0.90697067125067
