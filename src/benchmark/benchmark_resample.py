@@ -1,7 +1,6 @@
 '''
 Benchmark_resample.py
 
-重新生成样本
 
 '''
 
