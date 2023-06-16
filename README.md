@@ -1,6 +1,7 @@
 # DDCCMCKP
-This is a set of codes and benchmark set of paper, Data-driven chance-constrained multiple-choice knapsack problem.
+This is work related to paper, Data-driven chance-constrained multiple-choice knapsack problem.
 
+## Abstract
 The multiple-choice knapsack problem (MCKP) is widely applicable in various fields. 
 Motivated by several practical applications, this work investigates a new variant of MCKP, called data-driven chance-constrained multiple-choice knapsack problem (DDCCMCKP). 
 The problem is formulated and two sets of benchmarks are proposed.
