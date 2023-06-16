@@ -1,0 +1,5 @@
+dist_type gamma
+para_mean 0.8764397883263765
+param_variance 0.08855345461599616
+sample_mean 0.8398100549757357
+sample_standard_deviation 0.2664725669400266

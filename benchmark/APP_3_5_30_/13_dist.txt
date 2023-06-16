@@ -1,0 +1,5 @@
+dist_type truncated_norm
+para_mean 2.5660585952104658
+param_variance 1.9963726038724507
+sample_mean 3.811665231341391
+sample_standard_deviation 3.1948761705757427

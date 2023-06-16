@@ -1,0 +1,6 @@
+dist_type bimodal
+para_mean 6.276633823318656
+param_variance 1.608010700958135
+sample_mean 8.696237745884382
+sample_standard_deviation 4.561230356940487
+select 2
