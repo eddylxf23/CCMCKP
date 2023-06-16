@@ -1,13 +1,13 @@
 '''
 Benchmark_lab.py
 
-生成每个因子的分布，并进行采样
-    1) 模拟采样:
-        采样数较小,由 sample_size 控制
-    2) 真实蒙特卡洛采样:
-        保留原始参数和生成器，检验时调用
-    3)共有四种分布,每个因子随机挑选分布，在进行随机扰动后生成。
-采样完成后保存
+Generate distributions for each factor and sample from them:
+1) Simulated sampling:
+Sampling is controlled by the sample_size parameter because the number of samples is small.
+2) Real Monte Carlo sampling:
+The original parameters and generator are retained, and the sampling is called during testing.
+3) There are four distributions to choose from, and a random distribution is selected for each factor, which is then randomized to generate a random perturbation.
+After sampling is complete, save the results.
 
 '''
 
