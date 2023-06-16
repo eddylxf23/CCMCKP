@@ -1,6 +1,17 @@
 '''
 Benchmark_APP.py
 
+Generate distributions for each factor and sample from them:
+1) Simulated sampling:
+The number of samples is very small and is controlled by the sample_size parameter.
+2) Real Monte Carlo sampling:
+Direct sampling is performed for the distribution, with a large sample size controlled by the big_sample_size parameter. The sampling is used to estimate the true probability distribution.
+3) There are four distributions to choose from, and a random distribution is selected for each factor to generate.
+4) For a single item, the generation process is as follows:
+    a. Randomly generate a distribution;
+    b. With probabilities of 0.999, 0.000999, 0.000000999, 0.000000001, randomly generate and sample from truncated distributions in (0,10], (10,20], (20,30], and (30,40];
+    c. Repeat the above process L times to get a sample set.
+After sampling is complete, save the results.
 '''
 import sys
 sys.path.append(sys.path[0] + '/../')
