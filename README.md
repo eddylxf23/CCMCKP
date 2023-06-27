@@ -11,3 +11,6 @@ The most merit of the proposed algorithm remains in evaluating solutions with ch
 The experimental results demonstrate the effectiveness of the proposed algorithm and show that it is superior to other baselines. 
 Ablation experiments also confirm the necessity of each component in the algorithm.
 Our novel algorithm can serve as a new baseline, and the code and benchmark sets will be open-sourced to further promote research on DDCCMCKP.
+
+## Support
+Due to space limitations, we have put the supporting materials and complete experimental results in the support.pdf for further understanding of our work.
