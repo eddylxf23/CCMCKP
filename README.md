@@ -13,4 +13,4 @@ Ablation experiments also confirm the necessity of each component in the algorit
 Our novel algorithm can serve as a new baseline, and the code and benchmark sets will be open-sourced to further promote research on DDCCMCKP.
 
 ## Support
-Due to space limitations, we have put the supporting materials and complete experimental results in the support.pdf for further understanding of our work.
+Due to space limitations, we have put the supporting materials and complete experimental results in the /support.pdf for further understanding of our work.
