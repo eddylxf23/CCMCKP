@@ -13,5 +13,5 @@ Experimental results demonstrate the effectiveness of DDALS and show that it is 
 Additionally, ablation studies confirm the necessity of each component in the algorithm.
 Our proposed algorithm can serve as the baseline for future research, and the code and benchmark sets will be open-sourced to further promote research on this challenging problem.
 
-##  supplementary.pdf
+##  supplementary materials.pdf
 Due to space limitations, we have put the supporting materials and complete experimental results in the /supplementary.pdf for further understanding of our work. The supplementary materials (supplementary.pdf) contain complete experimental results, charts, and analysis involved in our research process. The purpose of these supporting materials is to provide readers with more detailed and comprehensive information for further understanding of our research work. In addition, these support materials can also help other researchers to replicate our experiments and verify our research results. We have uploaded this supplementary material to GitHub for free download and use by others.
