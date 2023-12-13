@@ -1,6 +1,4 @@
-'''
-定义因子的类
-'''
+
 
 import numpy as np
 
