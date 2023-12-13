@@ -4,10 +4,6 @@ import pickle as pkl
 
 REPO_DIR = os.path.dirname(os.path.dirname(os.path.dirname(os.path.realpath(__file__))))
 
-'''
-路径管理工具，卢宁在华为项目中写的，可以删掉
-删掉后把其他脚本里的路径改为正确路径
-'''
 
 def real_path_of(*path_in_repo):
     real_path = os.path.join(REPO_DIR, *path_in_repo)
