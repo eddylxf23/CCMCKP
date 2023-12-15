@@ -73,8 +73,8 @@ def CCMCKP_main(Evaluation, Tmax,  CL, param, MonteCarloTimes, QuickCheckList):
     if lambda_itera == 0:
         print("\n初始解已满足, 全体解空间已被搜索。")
     else:
-        point_a = [C**2/lambda_itera**2, Tmax_itera + C**2/lambda_itera]
-        point_b = [maxvar, Tmax_itera + C*math.sqrt(maxvar)]
+        point_a = [C**2/lambda_itera**2, Tmax_itera - C**2/lambda_itera]
+        point_b = [maxvar, Tmax_itera - C*math.sqrt(maxvar)]
         a_x, a_y = point_a[0],point_a[1]
         b_x, b_y = point_b[0],point_b[1]
         lambda_ab = (b_y-a_y)/(b_x-a_x)
@@ -85,12 +85,7 @@ def CCMCKP_main(Evaluation, Tmax,  CL, param, MonteCarloTimes, QuickCheckList):
         T_set = [T_ab]
         point_set = [[point_a,point_b]]
 
-        ttt = 0
         while len(Gamma_set) !=0 :
-            ttt += 1
-            print(ttt)
-            if ttt>= 100:
-                break
             # 临时集合
             Gamma_set_tem = []
             T_set_tem = []
@@ -121,13 +116,11 @@ def CCMCKP_main(Evaluation, Tmax,  CL, param, MonteCarloTimes, QuickCheckList):
                     point_2 = point_set[i][1]
                     # point_1 = point_a
                     # point_2 = point_b
-                    if point_tem[0] == point_1[0] or point_tem[0] == point_2[0] or point_tem[1]==point_1[1] or point_tem[1]== point_2[1]:
-                        continue
 
-                    lambda_1 = (point_tem[1]-point_1[1])/(point_tem[0]-point_1[0]) + _epsilon
+                    lambda_1 = (point_tem[1]-point_1[1])/(point_tem[0]-point_1[0]) - _epsilon
                     T_1 = lambda_1*(-point_1[0]) + point_1[1]
 
-                    lambda_2 = (point_2[1]-point_tem[1])/(point_2[0]-point_tem[0]) - _epsilon
+                    lambda_2 = (point_2[1]-point_tem[1])/(point_2[0]-point_tem[0]) + _epsilon
                     T_2 = lambda_2*(-point_2[0]) + point_2[1]
 
                     Gamma_set_tem.append(lambda_1)
