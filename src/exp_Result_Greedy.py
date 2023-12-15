@@ -65,7 +65,7 @@ if __name__=="__main__":
     _lambda = 5
     Iterative_time = 30
     CL = 0.99
-    sign  = ['lab','huawei']
+    sign  = ['lab','app']
     process_list: List[_Process] = []
 
     for s in sign:
@@ -85,16 +85,16 @@ if __name__=="__main__":
 
         else:
             Instance_folder = [\
-                'benchmark/Instance_huawei_3_5_30_',
-                'benchmark/Instance_huawei_4_5_30_',
-                'benchmark/Instance_huawei_5_5_30_',
-                'benchmark/Instance_huawei_5_10_30_',
-                'benchmark/Instance_huawei_10_10_500_',
-                'benchmark/Instance_huawei_10_20_500_',
-                'benchmark/Instance_huawei_20_10_500_',
-                'benchmark/Instance_huawei_30_10_500_',
-                'benchmark/Instance_huawei_40_10_500_',
-                'benchmark/Instance_huawei_50_10_500_']
+                'benchmark/Instance_app_3_5_30_',
+                'benchmark/Instance_app_4_5_30_',
+                'benchmark/Instance_app_5_5_30_',
+                'benchmark/Instance_app_5_10_30_',
+                'benchmark/Instance_app_10_10_500_',
+                'benchmark/Instance_app_10_20_500_',
+                'benchmark/Instance_app_20_10_500_',
+                'benchmark/Instance_app_30_10_500_',
+                'benchmark/Instance_app_40_10_500_',
+                'benchmark/Instance_app_50_10_500_']
             Tmax = [[21,27],[47,49],[27,38],[16,27],[32,37],[13,16],[43,48],[58,70],[85,95],[91,100]]
 
 
