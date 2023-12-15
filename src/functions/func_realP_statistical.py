@@ -28,8 +28,8 @@ def real_P_test(solution, T_max, see, data_folder, sign):
         mu_ = float(data[1].strip().split()[1])
         variance_ = float(data[2].strip().split()[1])
 
-        if sign == 'huawei':
-            #-------------- Huawei 长尾数据 --------------
+        if sign == 'app':
+            #-------------- APP 长尾数据 --------------
             if distribution == 'uniform':
                 sum_samples += Uniform_h(big_sample_size,ind_,prob_)
             elif distribution == 'fatiguelife':
