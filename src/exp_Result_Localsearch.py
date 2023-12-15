@@ -16,7 +16,7 @@ import numpy as np
 from multiprocessing import Process as _Process
 from typing import List
 from src.functions.func_cl_estimator import advanced_exact_evaluation, advanced_monte_carlo, factorization_list
-from src.functions.func_localsearch_cp import Construct_Procedure_B
+from src.functions.func_localsearch_cp import Construct_Procedure
 from src.functions.func_solution_factor import Statistic_factor
 from src.functions.func_localsearch import Local_Search_DD
 from src.functions.func_realP_statistical import real_P_test
@@ -25,7 +25,7 @@ def param_test(Aw, Au, Av, fi, param,T_m, CL, MC_sample_size, Evaluation, _maxit
     np.random.randint(seed)
     print(f"LocalSearch_{sign}_{int(param[0])}_{int(param[1])}_{int(param[2])}_{T_m} 第{times} 开始！")
     start_time = time.time()
-    S_cp = Construct_Procedure_B(Evaluation, Aw, Au, fi, CL, T_m, param, MC_sample_size,quick_check_list)
+    S_cp = Construct_Procedure(Evaluation, Aw, Au, fi, CL, T_m, param, MC_sample_size,quick_check_list)
     Solution_LS = Local_Search_DD(Evaluation, S_cp, Av, fi, CL, T_m, param, _maxiter, MC_sample_size, quick_check_list)
     running_time = time.time()-start_time
     real_CL0 = real_P_test(Solution_LS[0][2], T_m, seed, data_folder, sign)
@@ -91,7 +91,7 @@ if __name__=="__main__":
     _lambda = 5
     Iterative_time = 30
     CL = 0.99
-    sign  = ['lab','huawei']
+    sign  = ['lab','app']
     process_list: List[_Process] = []
 
     for s in sign:
@@ -111,16 +111,16 @@ if __name__=="__main__":
 
         else:
             Instance_folder = [\
-                'benchmark/Instance_huawei_3_5_30_',
-                'benchmark/Instance_huawei_4_5_30_',
-                'benchmark/Instance_huawei_5_5_30_',
-                'benchmark/Instance_huawei_5_10_30_',
-                'benchmark/Instance_huawei_10_10_500_',
-                'benchmark/Instance_huawei_10_20_500_',
-                'benchmark/Instance_huawei_20_10_500_',
-                'benchmark/Instance_huawei_30_10_500_',
-                'benchmark/Instance_huawei_40_10_500_',
-                'benchmark/Instance_huawei_50_10_500_']
+                'benchmark/Instance_app_3_5_30_',
+                'benchmark/Instance_app_4_5_30_',
+                'benchmark/Instance_app_5_5_30_',
+                'benchmark/Instance_app_5_10_30_',
+                'benchmark/Instance_app_10_10_500_',
+                'benchmark/Instance_app_10_20_500_',
+                'benchmark/Instance_app_20_10_500_',
+                'benchmark/Instance_app_30_10_500_',
+                'benchmark/Instance_app_40_10_500_',
+                'benchmark/Instance_app_50_10_500_']
             Tmax = [[21,27],[47,49],[27,38],[16,27],[32,37],[13,16],[43,48],[58,70],[85,95],[91,100]]
 
         
