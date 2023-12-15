@@ -24,7 +24,7 @@ import random
 import numpy as np
 from random import choice
 from functions.func_cl_estimator import monte_carlo_estimate, advanced_monte_carlo, exact_evaluation, advanced_exact_evaluation,Hoeffding_estimate,Bernstein_estimate,factorization_list
-from functions.func_localsearch_cp import Construct_Procedure_A,Construct_Procedure_B
+from functions.func_localsearch_cp import Construct_Procedure
 from functions.func_solution_factor import solution_cost,Statistic_factor, confidence_list_evaluation, Solution_Evaluation
 from functions.func_realP_statistical import real_P_test
 
@@ -326,9 +326,9 @@ if __name__=='__main__':
     start = time.time()
     Aw,Au,Av,FactortoObject = Statistic_factor(param,  _lambda, folder_name)
 
-    # QuickCheckList = factorization_list(samplesize,int(param[0]),CL,10,20)
+    QuickCheckList = factorization_list(samplesize,int(param[0]),CL,10,20)
     QuickCheckList = []
-    S_cp2 = Construct_Procedure_B(Evaluation, Aw,Au,FactortoObject, CL, Tmax, param, MonteCarloTimes,QuickCheckList)
+    S_cp2 = Construct_Procedure(Evaluation, Aw,Au,FactortoObject, CL, Tmax, param, MonteCarloTimes,QuickCheckList)
     Solution2 = Local_Search_DD(Evaluation,S_cp2, Av, FactortoObject, CL, Tmax,param,MaxIter_LS, MonteCarloTimes,QuickCheckList)
     # solu = [Av[ia][0] for ia in range(len(Av))]
     # print("Solution(mini):",solu, solution_cost(solu,FactortoObject))
@@ -338,9 +338,5 @@ if __name__=='__main__':
     print("Solution(95):",Solution2[1])
     print("Solution(weighted):",Solution2[2])
     print("============================================")
-    
-    # print(real_P_test(Solution2[0][2], T_m, se, folder_name, 'lab'))
-    # print(real_P_test(solu, Tmax, se, folder_name, 'lab'))
-    # print(real_P_test(Solution2[0][2], Tmax, se, folder_name, 'lab'))
 
 
