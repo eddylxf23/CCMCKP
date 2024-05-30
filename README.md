@@ -1,4 +1,4 @@
-# DDCCMCKP
+# CCMCKP
 This is work related to paper, Chance-Constrained Multiple-Choice Knapsack Problem: Model, Algorithms, and Applications.
 
 ## Abstract
